@@ -74,7 +74,7 @@
       <!-- Calculator Display -->
       <input type="text" id="display" readonly />
 
-      <!-- Calculator Buttons -->
+      <!-- butto ns -->
       <div class="row">
         <button class="button" onclick="appendToDisplay('7')">7</button>
         <button class="button" onclick="appendToDisplay('8')">8</button>
@@ -114,22 +114,21 @@
     </div>
 
     <script>
-      // Append input to the display
+
       function appendToDisplay(value) {
         const display = document.getElementById("display");
         display.value += value;
       }
 
-      // Clear the display
       function clearDisplay() {
         document.getElementById("display").value = "";
       }
 
-      // Calculate the result of the expression
+
       function calculate() {
         const display = document.getElementById("display");
         try {
-          // Replace sin, cos, tan, sqrt with Math.sin, Math.cos, etc.
+
           const expression = display.value
             .replace(/sin\(/g, "Math.sin(")
             .replace(/cos\(/g, "Math.cos(")
